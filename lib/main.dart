@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:mystistreg/screens/counter_model.dart';
 import 'package:mystistreg/screens/marker_list/marker_list_route.dart';
+import 'package:provider/provider.dart';
 
 import 'theme/theme.dart';
 
 void main() {
-  runApp(const App());
+  runApp(ChangeNotifierProvider(
+      create: ((context) => CounterModel()), child: const App()));
 }
 
 class App extends StatelessWidget {
