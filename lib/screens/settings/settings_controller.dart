@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mystistreg/screens/marker_list/marker_list_route.dart';
-import 'package:mystistreg/screens/marker_list/marker_list_view_phone.dart';
-import 'package:mystistreg/screens/marker_list/marker_list_view_watch.dart';
+import 'package:mystistreg/screens/settings/settings_route.dart';
+import 'package:mystistreg/screens/settings/settings_view_phone.dart';
+import 'package:mystistreg/screens/settings/settings_view_watch.dart';
 
 /// The Controller handles the state and business logic.
-class MarkerListController extends State<MarkerListRoute> {
+class SettingsController extends State<SettingsRoute> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -13,11 +13,11 @@ class MarkerListController extends State<MarkerListRoute> {
 
       // Watch-sized device
       if (constraints.maxWidth < 300) {
-        return MarkerListViewWatch(this);
+        return SettingsViewWatch(this);
       }
       // Phone-sized device
       else {
-        return MarkerListViewPhone(this);
+        return SettingsViewPhone(this);
       }
     });
   }
