@@ -1,0 +1,47 @@
+name: mystistreg
+description: Your personal Mystifik stregliste.
+
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  hexagon: ^0.2.0-nullsafety.1
+  wear: ^1.1.0
+  shared_preferences: ^2.0.15
+  flutter_native_splash: ^2.2.0
+  flutter_launcher_icons: ^0.10.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+dependency_overrides:
+  flutter_svg: 0.22.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/logo.svg
+    - assets/images/logo-name-no-rings.svg
+    - assets/images/beer.svg
+    - assets/images/candy.svg
+    - assets/images/choco.svg
+    - assets/images/cider.svg
+    - assets/images/cola.svg
+    - assets/images/turtle.svg
+
+flutter_native_splash:
+  color: "#F44336"
+  image: assets/images/logo.png
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: assets/images/app_icon.png
+  min_sdk_android: 23 # android min sdk min:16, default 21
